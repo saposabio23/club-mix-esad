@@ -27,6 +27,7 @@ function chooseSomeone() {
 //ENTER
 const enter = document.getElementById("enter");
 const cibleScreen = document.getElementById("cibleScreen");
+const titleSite = document.getElementById("titleSite");
 
 function cibleOpen() {
   document.querySelector(".fond").style.display = "none";
@@ -58,6 +59,7 @@ function stopRotating() {
 function playPauseAudio() {
   //   console.log(click);
   if (audio.paused) {
+    titleSite.setAttribute("scrollamount", "30");
     cible.classList.add("cibleBounce");
     setTimeout(function () {
       cible.classList.remove("cibleBounce");
@@ -66,6 +68,7 @@ function playPauseAudio() {
     audio.play();
     startRotating();
   } else {
+    titleSite.setAttribute("scrollamount", "2");
     cible.classList.add("cibleBounce");
     setTimeout(function () {
       cible.classList.remove("cibleBounce");

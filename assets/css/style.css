@@ -17,6 +17,29 @@ body {
 
 
 /************** CIBLE **************/
+
+#titleSite {
+    font-size: 1.7rem;
+    color: white;
+    margin: 0;
+    font-style: italic;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    border-bottom: 1px dashed black;
+    z-index: 1;
+    background-color: black;
+    transition: all 1s ease-in-out;
+
+}
+
+#titleSite:hover {
+    font-size: 10rem;
+    transition: all 1s ease-in-out;
+
+}
+
 #cibleScreen {
     height: 100svh;
     width: 100vw;
@@ -56,15 +79,14 @@ body {
 
 
 .cibleOpen {
-    height: 80px !important;
+    height: 100px !important;
     width: 100vw !important;
     top: var(--spacing) !important;
-
     -webkit-transition: all 1s ease-in-out !important;
-
     -o-transition: all 1s ease-in-out !important;
-
     transition: all 1s ease-in-out !important;
+
+    flex-direction: column;
 }
 
 
@@ -91,6 +113,8 @@ body {
     -webkit-transition: height .2s linear;
     -o-transition: height .2s linear;
     transition: height .2s linear;
+
+    z-index: 2;
 }
 
 .cibleBounce {
@@ -245,6 +269,8 @@ summary h2 {
         -ms-flex-pack: left !important;
         justify-content: left !important;
         left: var(--spacing) !important;
+        flex-direction: row;
+
     }
 
     .columnIntro img {
