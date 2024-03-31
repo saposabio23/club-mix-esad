@@ -20,20 +20,31 @@ body {
 #cibleScreen {
     height: 100svh;
     width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
+    -webkit-transition: backgroundColor 0s linear;
+    -o-transition: backgroundColor 0s linear;
     transition: backgroundColor 0s linear;
 
     overflow: hidden;
 }
 
 .fond {
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     width: 100%;
     height: 100%;
@@ -49,6 +60,10 @@ body {
     width: 100vw !important;
     top: var(--spacing) !important;
 
+    -webkit-transition: all 1s ease-in-out !important;
+
+    -o-transition: all 1s ease-in-out !important;
+
     transition: all 1s ease-in-out !important;
 }
 
@@ -62,14 +77,26 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-transition: height .2s linear;
+    -o-transition: height .2s linear;
     transition: height .2s linear;
 }
 
 .cibleBounce {
     height: 75% !important;
+    -webkit-transition: height .2s linear;
+    -o-transition: height .2s linear;
     transition: height .2s linear;
 }
 
@@ -82,6 +109,8 @@ body {
     position: absolute;
     left: 50%;
     bottom: var(--spacing);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 
     background-color: black;
@@ -116,6 +145,7 @@ body {
     width: 100%;
     overflow: scroll;
     scrollbar-width: none;
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
 
 }
@@ -128,6 +158,7 @@ body {
 
 .column>div {
     padding: var(--spacing);
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -137,6 +168,8 @@ body {
     font-family: 'unnamedregular';
     font-size: 3rem;
     color: white;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 
     text-decoration: none;
@@ -147,6 +180,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -206,6 +241,8 @@ summary h2 {
     }
 
     .cibleOpen {
+        -webkit-box-pack: left !important;
+        -ms-flex-pack: left !important;
         justify-content: left !important;
         left: var(--spacing) !important;
     }
