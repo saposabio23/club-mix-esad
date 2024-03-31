@@ -18,7 +18,7 @@ body {
 
 /************** CIBLE **************/
 #cibleScreen {
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -103,7 +103,7 @@ body {
 
 /************** CONTAINER **************/
 #container {
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -194,4 +194,24 @@ details[open] {
 summary h2 {
     display: inline;
     font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
+
+    .column {
+        height: calc(100svh/3);
+    }
+
+    .cibleOpen {
+        justify-content: left !important;
+        left: var(--spacing) !important;
+    }
+
+    .columnIntro img {
+        width: 60px;
+    }
+
 }
