@@ -30,12 +30,17 @@ const cibleScreen = document.getElementById("cibleScreen");
 const titleSite = document.getElementById("titleSite");
 
 function cibleOpen() {
-  document.querySelector(".fond").style.display = "none";
-  cibleScreen.classList.add("cibleOpen");
-  cible.style.height = "100%";
-  enter.style.display = "none";
+  if (cibleScreen.classList.contains("cibleOpen")) {
+    document.querySelector(".fond").style.display = "block";
+    cibleScreen.classList.remove("cibleOpen");
+    cible.style.height = "70%";
+  } else {
+    document.querySelector(".fond").style.display = "none";
+    cibleScreen.classList.add("cibleOpen");
+    cible.style.height = "100%";
+  }
 }
-enter.addEventListener("click", cibleOpen);
+titleSite.addEventListener("click", cibleOpen);
 
 // PLAY AUDIO
 const audio = document.getElementById("audio");
@@ -59,7 +64,7 @@ function stopRotating() {
 function playPauseAudio() {
   //   console.log(click);
   if (audio.paused) {
-    titleSite.setAttribute("scrollamount", "30");
+    titleSite.setAttribute("scrollamount", "15");
     cible.classList.add("cibleBounce");
     setTimeout(function () {
       cible.classList.remove("cibleBounce");
@@ -68,7 +73,7 @@ function playPauseAudio() {
     audio.play();
     startRotating();
   } else {
-    titleSite.setAttribute("scrollamount", "2");
+    titleSite.setAttribute("scrollamount", "4");
     cible.classList.add("cibleBounce");
     setTimeout(function () {
       cible.classList.remove("cibleBounce");

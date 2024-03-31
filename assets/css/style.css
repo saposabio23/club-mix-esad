@@ -19,25 +19,25 @@ body {
 /************** CIBLE **************/
 
 #titleSite {
-    font-size: 1.7rem;
     color: white;
+    background-color: black;
     margin: 0;
     font-style: italic;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    border-bottom: 1px dashed black;
     z-index: 1;
-    background-color: black;
-    transition: all 1s ease-in-out;
+    font-size: 2rem;
+
+    font-family: 'unnamedregular';
+
 
 }
 
 #titleSite:hover {
-    font-size: 10rem;
-    transition: all 1s ease-in-out;
-
+    color: black;
+    background-color: white;
 }
 
 #cibleScreen {
@@ -116,6 +116,10 @@ body {
 
     z-index: 2;
 }
+
+/* #cible:hover {
+    filter: invert(1);
+} */
 
 .cibleBounce {
     height: 75% !important;
