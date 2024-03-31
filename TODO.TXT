@@ -1,0 +1,1 @@
+- favicon as cible GIF rotating
