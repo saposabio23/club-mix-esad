@@ -17,6 +17,14 @@ body {
 
 
 /************** CIBLE **************/
+#button {
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 999;
+    height: 20px;
+    width: 20px;
+}
 
 marquee {
     color: white;
@@ -78,7 +86,7 @@ marquee {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 10;
     position: fixed;
     top: 0;
     left: 0;

@@ -26,6 +26,7 @@ function chooseSomeone() {
 
 //ENTER
 const enter = document.getElementById("enter");
+const button = document.getElementById("button");
 const cibleScreen = document.getElementById("cibleScreen");
 
 function cibleOpen() {
@@ -33,13 +34,15 @@ function cibleOpen() {
     document.querySelector(".fond").style.display = "block";
     cibleScreen.classList.remove("cibleOpen");
     cible.style.height = "70%";
+    enter.style.display = "block";
   } else {
     document.querySelector(".fond").style.display = "none";
     cibleScreen.classList.add("cibleOpen");
     cible.style.height = "100%";
+    enter.style.display = "none";
   }
 }
-// enter.addEventListener("click", cibleOpen);
+button.addEventListener("click", cibleOpen);
 
 // PLAY AUDIO
 const audio = document.getElementById("audio");
