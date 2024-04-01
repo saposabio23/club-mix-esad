@@ -27,7 +27,6 @@ function chooseSomeone() {
 //ENTER
 const enter = document.getElementById("enter");
 const cibleScreen = document.getElementById("cibleScreen");
-const titleSite = document.getElementById("titleSite");
 
 function cibleOpen() {
   if (cibleScreen.classList.contains("cibleOpen")) {
@@ -40,7 +39,7 @@ function cibleOpen() {
     cible.style.height = "100%";
   }
 }
-titleSite.addEventListener("click", cibleOpen);
+// enter.addEventListener("click", cibleOpen);
 
 // PLAY AUDIO
 const audio = document.getElementById("audio");
@@ -64,7 +63,6 @@ function stopRotating() {
 function playPauseAudio() {
   //   console.log(click);
   if (audio.paused) {
-    titleSite.setAttribute("scrollamount", "15");
     cible.classList.add("cibleBounce");
     setTimeout(function () {
       cible.classList.remove("cibleBounce");
@@ -73,7 +71,6 @@ function playPauseAudio() {
     audio.play();
     startRotating();
   } else {
-    titleSite.setAttribute("scrollamount", "4");
     cible.classList.add("cibleBounce");
     setTimeout(function () {
       cible.classList.remove("cibleBounce");

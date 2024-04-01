@@ -18,27 +18,53 @@ body {
 
 /************** CIBLE **************/
 
-#titleSite {
+marquee {
     color: white;
     background-color: black;
     margin: 0;
     font-style: italic;
     position: fixed;
+    z-index: 1;
+    font-size: 2rem;
+    text-transform: full-width;
+    font-family: 'unnamedregular';
+
+    display: none;
+}
+
+#marqueeTop {
     top: 0;
     left: 0;
     width: 100vw;
+    z-index: 4;
+}
+
+#marqueeRight {
+    right: -50vh;
+    top: 50vh;
+    width: 100vh;
+    transform-origin: top;
+    transform: rotate(90deg);
     z-index: 1;
-    font-size: 2rem;
-
-    font-family: 'unnamedregular';
-
-
 }
 
-#titleSite:hover {
-    color: black;
-    background-color: white;
+#marqueeBottom {
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    transform: rotate(180deg);
+    z-index: 2;
 }
+
+#marqueeLeft {
+    left: -50vh;
+    top: 50vh;
+    width: 100vh;
+    transform-origin: top;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
 
 #cibleScreen {
     height: 100svh;
@@ -136,7 +162,7 @@ body {
 #enter {
     position: absolute;
     left: 50%;
-    bottom: var(--spacing);
+    bottom: calc(var(--spacing)*2);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -149,11 +175,14 @@ body {
     font-family: 'unnamedregular';
     font-size: 2rem;
 
+
+    opacity: .5;
 }
 
 #enter:hover {
     background-color: white;
     color: black;
+    cursor: not-allowed;
 }
 
 
