@@ -29,6 +29,14 @@ const enter = document.getElementById("enter");
 const button = document.getElementById("button");
 const cibleScreen = document.getElementById("cibleScreen");
 
+enter.addEventListener("mouseenter", (event) => {
+  enter.innerHTML = "PROCHAINEMENT";
+});
+
+enter.addEventListener("mouseleave", (event) => {
+  enter.innerHTML = "MIX";
+});
+
 function cibleOpen() {
   if (cibleScreen.classList.contains("cibleOpen")) {
     document.querySelector(".fond").style.display = "block";

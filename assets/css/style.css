@@ -18,12 +18,21 @@ body {
 
 /************** CIBLE **************/
 #button {
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 5px;
     position: fixed;
     z-index: 999;
     height: 20px;
     width: 20px;
+
+    border-radius: 100px;
+    transition: all .5s ease-in-out;
+
+}
+
+#button:hover {
+    background-color: black;
+
 }
 
 marquee {
@@ -113,16 +122,22 @@ marquee {
 
 
 .cibleOpen {
-    height: 100px !important;
+    /* height: 100px !important;
     width: 100vw !important;
-    top: var(--spacing) !important;
-    -webkit-transition: all 1s ease-in-out !important;
-    -o-transition: all 1s ease-in-out !important;
-    transition: all 1s ease-in-out !important;
+    top: var(--spacing) !important; */
+    -webkit-transition: all .5s ease-in-out !important;
+    -o-transition: all .5s ease-in-out !important;
+    transition: all .5s ease-in-out !important;
 
-    flex-direction: column;
+    transform: translateY(-85%);
+    height: fit-content !important;
 }
 
+.cibleOpen:hover {
+    transition: all .5s ease-in-out !important;
+    transform: translateY(-80%);
+
+}
 
 #cible {
     height: 70%;
@@ -183,8 +198,6 @@ marquee {
     font-family: 'unnamedregular';
     font-size: 2rem;
 
-
-    opacity: .5;
 }
 
 #enter:hover {
@@ -306,12 +319,8 @@ summary h2 {
     }
 
     .cibleOpen {
-        -webkit-box-pack: left !important;
-        -ms-flex-pack: left !important;
-        justify-content: left !important;
-        left: var(--spacing) !important;
-        flex-direction: row;
-
+        transform: translateY(-80%);
+        height: fit-content !important;
     }
 
     .columnIntro img {
